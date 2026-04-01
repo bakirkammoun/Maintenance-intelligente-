@@ -1,0 +1,226 @@
+/* Devices Page Retrofit */
+.devices-page {
+  padding: 2px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.filters-container {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--secondary-bg);
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  border: 1px solid var(--border-color);
+}
+
+.filter-group:hover {
+  background: #E6EFFE;
+}
+
+.filter-icon {
+  color: #4318FF;
+}
+
+.filter-select {
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  padding-right: 4px;
+}
+
+.devices-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card Styling to match Fleet Card */
+.device-card-robot {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.device-card-robot:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.device-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.device-name {
+  font-size: 1.1rem;
+  font-weight: 850;
+  color: var(--text-primary);
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.device-metrics-section {
+  margin-bottom: 20px;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  color: #A3AED0;
+  font-weight: 700;
+}
+
+.metric-value-blue {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.failure-probability-section {
+  margin-top: auto;
+  border-top: none;
+  padding-top: 0;
+  background: var(--secondary-bg);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.failure-probability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.failure-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #A3AED0;
+}
+
+.failure-percentage {
+  font-size: 1rem;
+  font-weight: 850;
+  color: var(--text-primary);
+}
+
+.progress-bar-container {
+  height: 8px;
+  background: rgba(163, 174, 208, 0.2);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Pagination Styles */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #4318FF;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f4f7fe;
+  box-shadow: none;
+}
+
+.pagination-info {
+  font-weight: 600;
+  color: #A3AED0;
+  font-size: 0.9rem;
+}

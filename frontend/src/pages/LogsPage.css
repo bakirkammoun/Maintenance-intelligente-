@@ -1,0 +1,270 @@
+.logs-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logs-page h1 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.logs-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.logs-filters input,
+.logs-filters select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.logs-filters input[type='text'] {
+  flex: 1;
+  min-width: 200px;
+}
+
+.logs-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.logs-table thead {
+  background-color: #f8f9fa;
+}
+
+.logs-table th {
+  padding: 15px;
+  text-align: left;
+  color: #2c3e50;
+  font-weight: 600;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.logs-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ecf0f1;
+  color: #2c3e50;
+}
+
+.logs-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.log-level {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px;
+  color: #7f8c8d;
+}
+
+.logs-page {
+  padding: 2px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header-group {
+  margin-bottom: 2rem;
+}
+
+.header-group h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  color: #4318FF;
+}
+
+.dashboard-subtitle {
+  color: #a3aed0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Controls Card */
+.logs-controls-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  background: var(--secondary-bg);
+  border-radius: 12px;
+  padding: 10px 16px;
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid var(--border-color);
+}
+
+.search-icon {
+  color: #8F9BBA;
+  margin-right: 12px;
+}
+
+.premium-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.filters-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--secondary-bg);
+  border-radius: 12px;
+  padding: 10px 16px;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.field-icon {
+  color: #4318FF;
+}
+
+.premium-select-filter,
+.premium-date-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.separator {
+  color: #A3AED0;
+  font-weight: 600;
+  margin: 0 4px;
+}
+
+/* Table Styles */
+.logs-table-container {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+.premium-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.premium-table thead th {
+  text-align: left;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+}
+
+.premium-table tbody tr {
+  transition: background-color 0.2s;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.premium-table tbody tr:hover {
+  background-color: var(--secondary-bg);
+}
+
+.premium-table tbody td {
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.time-cell {
+  font-family: monospace;
+  color: #707EAE;
+}
+
+.device-cell {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Badges */
+.log-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.log-badge.info {
+  background: #E6EFFE;
+  color: #4318FF;
+}
+
+.log-badge.warning {
+  background: #FFF9F0;
+  color: #FFB547;
+}
+
+.log-badge.error {
+  background: #FFF5F5;
+  color: #EE5D50;
+}
+
+.empty-state-logs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  color: #A3AED0;
+  gap: 16px;
+}

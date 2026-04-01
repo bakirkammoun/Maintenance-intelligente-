@@ -1,0 +1,342 @@
+.config-page {
+  padding: 2px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header-group {
+  margin-bottom: 2rem;
+}
+
+.header-group h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-subtitle {
+  color: #a3aed0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.config-grid-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+}
+
+.config-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.config-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sidebar Styles */
+.machine-selector-config {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--secondary-bg);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.machine-select-dropdown-config {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.premium-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--secondary-bg);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.premium-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.premium-select:focus {
+  border-color: #4318FF;
+}
+
+.premium-input:focus {
+  border-color: #4318FF;
+  box-shadow: 0 0 0 2px rgba(67, 24, 255, 0.1);
+}
+
+.device-mini-info {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.device-mini-info .label {
+  color: #A3AED0;
+  font-weight: 600;
+}
+
+.device-mini-info .val {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.inputs-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group label {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.btn-save-all {
+  width: 100%;
+  background: #4318FF;
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-save-all:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(67, 24, 255, 0.2);
+}
+
+/* Sensors Grid */
+.sensors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.sensor-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+}
+
+.sensor-card.active {
+  border-color: var(--accent-color);
+}
+
+.sensor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.sensor-icon-bg {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.sensor-icon-bg.vibration {
+  background: #E6EFFE;
+  color: #4318FF;
+}
+
+.sensor-icon-bg.temperature {
+  background: #E6FAF5;
+  color: #05CD99;
+}
+
+.sensor-icon-bg.current {
+  background: #FFF9F0;
+  color: #FFB547;
+}
+
+.sensor-icon-bg.sound {
+  background: #FFF5F5;
+  color: #EE5D50;
+}
+
+.sensor-title {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sensor-title h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.sensor-body {
+  background: var(--secondary-bg);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.sensor-body label {
+  display: block;
+  color: #A3AED0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.premium-input-small {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.unit-badge {
+  background: var(--secondary-bg);
+  color: var(--text-secondary);
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+/* Switch Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--card-bg);
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #4318FF;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #4318FF;
+}
+
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+@media (max-width: 900px) {
+  .config-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sensors-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,5 @@
+# Format: username:password_hash
+# Générer le hash avec: mosquitto_passwd -c passwd admin
+# Exemple (mot de passe: admin123)
+admin:$7$101$...
+

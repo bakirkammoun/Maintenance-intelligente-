@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: maintenance-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: maintenance_db
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - maintenance-network
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: maintenance-mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mqtt/config:/mosquitto/config
+      - ./mqtt/data:/mosquitto/data
+      - ./mqtt/log:/mosquitto/log
+    networks:
+      - maintenance-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  maintenance-network:
+    driver: bridge
+

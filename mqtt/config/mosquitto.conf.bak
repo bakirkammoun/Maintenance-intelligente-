@@ -1,0 +1,39 @@
+# Configuration Mosquitto MQTT Broker
+# Pour système de maintenance prédictive
+
+# Écouter sur toutes les interfaces
+listener 1883
+allow_anonymous false
+
+# Authentification
+password_file /mosquitto/config/passwd
+
+# Logs
+log_dest file /mosquitto/log/mosquitto.log
+log_type error
+log_type warning
+log_type notice
+log_type information
+
+# Persistance
+persistence true
+persistence_location /mosquitto/data/
+
+# Limites de connexion
+max_connections -1
+max_inflight_messages 20
+max_queued_messages 1000
+
+# Keep alive
+# # keepalive_interval 60
+
+# QoS
+max_packet_size 268435455
+
+# Retain
+retained_persistence true
+
+# WebSocket (optionnel)
+# listener 9001
+# protocol websockets
+

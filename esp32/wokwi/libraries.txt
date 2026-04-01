@@ -1,0 +1,7 @@
+WiFi
+PubSubClient
+ArduinoJson
+Adafruit MPU6050
+Adafruit Unified Sensor
+DallasTemperature
+OneWire

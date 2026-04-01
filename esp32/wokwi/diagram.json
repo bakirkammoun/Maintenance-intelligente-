@@ -1,0 +1,163 @@
+{
+    "version": 1,
+    "author": "Antigravity",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-esp32-devkit-v1",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {
+                "env": "arduino-esp32"
+            }
+        },
+        {
+            "type": "wokwi-mpu6050",
+            "id": "imu",
+            "top": -80,
+            "left": 180,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot1",
+            "top": 150,
+            "left": 230,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot2",
+            "top": 250,
+            "left": 230,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-ds18b20",
+            "id": "temp",
+            "top": 50,
+            "left": 250,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX0",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX0",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "esp:D21",
+            "imu:SDA",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:D22",
+            "imu:SCL",
+            "yellow",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:GND.2",
+            "imu:GND",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:3V3",
+            "imu:VCC",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot1:SIG",
+            "esp:D34",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot1:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot2:SIG",
+            "esp:D35",
+            "blue",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot2:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "pot2:GND",
+            "esp:GND.1",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "temp:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "temp:GND",
+            "esp:GND.2",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "temp:DQ",
+            "esp:D4",
+            "yellow",
+            [
+                "v0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
